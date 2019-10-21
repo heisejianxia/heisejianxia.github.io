@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>飞利浦MX4000上切片运动超时</title>
+      <link href="/2019/10/21/fei-li-pu-mx4000-shang-qie-pian-yun-dong-chao-shi/"/>
+      <url>/2019/10/21/fei-li-pu-mx4000-shang-qie-pian-yun-dong-chao-shi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-故障现象："><a href="#1-故障现象：" class="headerlink" title="1.故障现象："></a>1.故障现象：</h2><pre><code>最开始使用一段时间后，设备会提示上切片运动超时，关机等一段时间后，重启设备又可以正常使用。其后设备故障发生频率越来越高，最终出现报错后再重启设备无法再恢复正常。</code></pre><h2 id="2-故障检修："><a href="#2-故障检修：" class="headerlink" title="2.故障检修："></a>2.故障检修：</h2><pre><code>初步检查发现报错时</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设备维修 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 飞利浦 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2019/10/18/hello-world/"/>
       <url>/2019/10/18/hello-world/</url>
