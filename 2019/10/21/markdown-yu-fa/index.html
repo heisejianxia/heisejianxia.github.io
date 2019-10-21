@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
     
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -424,11 +425,19 @@
 #### 这是四级标题
 ##### 这是五级标题
 ###### 这是六级标题</code></pre><p>效果如下：</p>
-<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><h2 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h2><ul>
-<li>加粗<br>要加粗的文字左右分别用两个*号包起来</li>
-<li>斜体<br>要倾斜的文字左右分别用一个*号包起来</li>
-<li>斜体加粗<br>要倾斜和加粗的文字左右分别用三个*号包起来</li>
-<li>删除线<br>要加删除线的文字左右分别用两个~~号包起来</li>
+<pre><code># 这是一级标题</code></pre><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><h2 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h2><ul>
+<li><p>加粗</p>
+<p>  要加粗的文字左右分别用两个*号包起来</p>
+</li>
+<li><p>斜体</p>
+<p>  要倾斜的文字左右分别用一个*号包起来</p>
+</li>
+<li><p>斜体加粗</p>
+<p>  要倾斜和加粗的文字左右分别用三个*号包起来</p>
+</li>
+<li><p>删除线</p>
+<p>  要加删除线的文字左右分别用两个~~号包起来</p>
+</li>
 </ul>
 <p>示例：</p>
 <pre><code>**这是加粗的文字**
@@ -536,8 +545,8 @@ title可加可不加</code></pre><p><strong>示例：</strong></p>
     1. 二级有序列表内容
     2. 二级有序列表内容
     3. 二级有序列表内容</code></pre><h2 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h2><p><strong>语法：</strong></p>
-<pre><code>| 表头 | 表头  | 表头 |
-| ---- | :---: | ---: |
+<pre><code>|**表头**|**表头**|**表头**|
+| - | :-: | -: |
 | 内容 | 内容  | 内容 |
 | 内容 | 内容  | 内容 |
 
