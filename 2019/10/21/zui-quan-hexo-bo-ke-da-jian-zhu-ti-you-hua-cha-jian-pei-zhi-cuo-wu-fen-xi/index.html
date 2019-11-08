@@ -244,6 +244,19 @@ Node.js 下载，并安装。详细步骤：https://www.simon96.">
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -396,14 +409,14 @@ Node.js 下载，并安装。详细步骤：https://www.simon96.">
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        6k
+                        5.9k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        26 分
+                        25 分
                     </div>
                     
                 
@@ -420,13 +433,13 @@ Node.js 下载，并安装。详细步骤：https://www.simon96.">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ol>
-<li>欢迎在文末留言，或者点击加入<a href="https://dwz.cn/Fdk9LftN" target="_blank" rel="noopener">QQ群933583982</a>互相交流。</li>
-<li>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处！</li>
+<li>欢迎在文末留言，或者点击加入<a href="https://dwz.cn/Fdk9LftN">QQ群933583982</a>互相交流。</li>
+<li>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处！</li>
 </ol>
 <h3 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h3><h4 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h4><ol>
-<li><p><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a> 下载，并安装。详细步骤：<a href="https://www.simon96.online/2018/11/10/hexo-env/" target="_blank" rel="noopener">https://www.simon96.online/2018/11/10/hexo-env/</a></p>
+<li><p><a href="http://nodejs.org/">Node.js</a> 下载，并安装。详细步骤：<a href="https://www.simon96.online/2018/11/10/hexo-env/">https://www.simon96.online/2018/11/10/hexo-env/</a></p>
 </li>
-<li><p><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a> 下载，并安装。详细步骤：<a href="https://www.simon96.online/2018/11/10/hexo-env/" target="_blank" rel="noopener">https://www.simon96.online/2018/11/10/hexo-env/</a></p>
+<li><p><a href="http://git-scm.com/">Git</a> 下载，并安装。详细步骤：<a href="https://www.simon96.online/2018/11/10/hexo-env/">https://www.simon96.online/2018/11/10/hexo-env/</a></p>
 </li>
 <li><p>安装Hexo，在命令行（即Git Bash）运行以下命令：</p>
 <blockquote>
@@ -466,7 +479,7 @@ $ cd &lt;folder&gt;$ npm install</code></pre><p>新建完成后，在路径下�
 </ol>
 <p>至此，您的Hexo博客已经搭建在本地。</p>
 <h4 id="实施方案"><a href="#实施方案" class="headerlink" title="实施方案"></a>实施方案</h4><h5 id="方案一：GithubPages"><a href="#方案一：GithubPages" class="headerlink" title="方案一：GithubPages"></a>方案一：GithubPages</h5><ol>
-<li><p>创建<a href="https://github.com/" target="_blank" rel="noopener">Github</a>账号</p>
+<li><p>创建<a href="https://github.com/">Github</a>账号</p>
 </li>
 <li><p>创建仓库， 仓库名为：&lt;Github账号名称&gt;.github.io</p>
 </li>
@@ -475,8 +488,8 @@ $ cd &lt;folder&gt;$ npm install</code></pre><p>新建完成后，在路径下�
 <pre><code>$ npm install hexo-deployer-git --save</code></pre><p>3.2. 添加SSH key。</p>
 <ul>
 <li><p>创建一个 SSH key 。在命令行（即Git Bash）输入以下命令， 回车三下即可：</p>
-<pre><code>$ ssh-keygen -t rsa -C &quot;邮箱地址&quot;</code></pre></li>
-<li><p>添加到 github。 复制密钥文件内容（路径形如<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>），粘贴到<a href="https://github.com/settings/keys" target="_blank" rel="noopener">New SSH Key</a>即可。</p>
+<pre><code>$ ssh-keygen -t rsa -C "邮箱地址"</code></pre></li>
+<li><p>添加到 github。 复制密钥文件内容（路径形如<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>），粘贴到<a href="https://github.com/settings/keys">New SSH Key</a>即可。</p>
 </li>
 <li><p>测试是否添加成功。在命令行（即Git Bash）依次输入以下命令，返回“You’ve successfully authenticated”即成功：</p>
 <pre><code>$ ssh -T git@github.com$ yes</code></pre></li>
@@ -509,14 +522,14 @@ $ cd &lt;folder&gt;$ npm install</code></pre><p>新建完成后，在路径下�
 </ol>
 <h5 id="方案三：GithubPages-CodingPages-域名"><a href="#方案三：GithubPages-CodingPages-域名" class="headerlink" title="方案三：GithubPages + CodingPages + 域名"></a>方案三：GithubPages + CodingPages + 域名</h5><p>GithubPages 在国内较慢，百度不收录，而CodingPages 在国外较快。所以在方案二的基础上，添加CodingPages 。</p>
 <ol>
-<li><p>创建<a href="https://coding.net/" target="_blank" rel="noopener">Coding</a>账号</p>
+<li><p>创建<a href="https://coding.net/">Coding</a>账号</p>
 </li>
 <li><p>创建仓库， 仓库名为：&lt;Coding账号名称&gt;</p>
 </li>
 <li><p>进入项目里『代码』页面，点击『一键开启静态 Pages』，稍等片刻CodingPages即可部署成功。</p>
 </li>
 <li><p>将本地Hexo博客推送到CodingPages</p>
-<p>4.1. 鉴于创建GithubPages 时，已经生成过公钥。可直接复制密钥文件内容（路径形如<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>）， 粘贴到<a href="https://dev.tencent.com/user/account/setting/keys" target="_blank" rel="noopener">新增公钥</a>。</p>
+<p>4.1. 鉴于创建GithubPages 时，已经生成过公钥。可直接复制密钥文件内容（路径形如<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>）， 粘贴到<a href="https://dev.tencent.com/user/account/setting/keys">新增公钥</a>。</p>
 <p>4.2. 测试是否添加成功。在命令行（即Git Bash）依次输入以下命令，返回“You’ve successfully authenticated”即成功：</p>
 <pre><code>$ ssh -T git@git.coding.net$ yes</code></pre><p>4.3. 修改<code>_config.yml</code>（在存放Hexo初始化文件的路径下）。文件末尾修改为：</p>
 <pre><code># Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy:- type: git  repo: git@github.com:&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io.git  branch: master- type: git  repo: git@git.dev.tencent.com:&lt;Coding账号名称&gt;/&lt;Coding账号名称&gt;.git  branch: master</code></pre><p>4.4. 推送到GithubPages。在命令行（即Git Bash）依次输入以下命令， 返回<code>INFO Deploy done: git</code>即成功推送：</p>
@@ -543,12 +556,12 @@ $ cd &lt;folder&gt;$ npm install</code></pre><p>新建完成后，在路径下�
 <p>至此，您的Hexo博客已经解析到自定义域名，<code>https://.github.io</code>和<code>https://.coding.me</code>依然可用。</p>
 <h3 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a>主题优化</h3><h4 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h4><p>Hexo默认的主题是landscape，推荐以下主题：</p>
 <ol>
-<li><a href="https://github.com/shenliyang/hexo-theme-snippet#hexo-theme-snippet" target="_blank" rel="noopener">snippet</a></li>
-<li><a href="https://github.com/iTimeTraveler/hexo-theme-hiero#hiero" target="_blank" rel="noopener">Hiero</a></li>
-<li><a href="https://github.com/tangkunyin/hexo-theme-jsimple#jsimple" target="_blank" rel="noopener">JSimple</a></li>
-<li><a href="https://github.com/chaooo/hexo-theme-BlueLake#bluelake" target="_blank" rel="noopener">BlueLake</a></li>
+<li><a href="https://github.com/shenliyang/hexo-theme-snippet#hexo-theme-snippet">snippet</a></li>
+<li><a href="https://github.com/iTimeTraveler/hexo-theme-hiero#hiero">Hiero</a></li>
+<li><a href="https://github.com/tangkunyin/hexo-theme-jsimple#jsimple">JSimple</a></li>
+<li><a href="https://github.com/chaooo/hexo-theme-BlueLake#bluelake">BlueLake</a></li>
 </ol>
-<p>详见：<a href="https://github.com/search?q=hexo-theme" target="_blank" rel="noopener">https://github.com/search?q=hexo-theme</a></p>
+<p>详见：<a href="https://github.com/search?q=hexo-theme">https://github.com/search?q=hexo-theme</a></p>
 <h4 id="应用主题"><a href="#应用主题" class="headerlink" title="应用主题"></a>应用主题</h4><ol>
 <li>下载主题</li>
 <li>将下载好的主题文件夹，粘贴到站点目录的<code>themes</code>下。</li>
@@ -571,11 +584,11 @@ $ cd &lt;folder&gt;$ npm install</code></pre><p>新建完成后，在路径下�
 </li>
 <li><p><strong>侧边栏社交链接</strong></p>
 <p>问题：图标哪里找？</p>
-<p>解决：<a href="https://fontawesome.com/icons?d=gallery" target="_blank" rel="noopener">Font Awesome</a></p>
+<p>解决：<a href="https://fontawesome.com/icons?d=gallery">Font Awesome</a></p>
 </li>
 <li><p><strong>开启打赏功能</strong></p>
 <p>问题：微信支付宝二维码不美观，规格不一。</p>
-<p>解决：<a href="https://cli.im/weixin" target="_blank" rel="noopener">在线生成二维码</a></p>
+<p>解决：<a href="https://cli.im/weixin">在线生成二维码</a></p>
 </li>
 <li><p><strong>设置友情链接</strong></p>
 </li>
@@ -602,11 +615,11 @@ $ cd &lt;folder&gt;$ npm install</code></pre><p>新建完成后，在路径下�
 }</code></pre><h5 id="修改Logo字体"><a href="#修改Logo字体" class="headerlink" title="修改Logo字体"></a>修改Logo字体</h5><p>在 <code>themes/*/source/css/_custom/custom.styl</code> 中添加如下代码：</p>
 <pre><code>@font-face {
     font-family: Zitiming;
-    src: url(&#39;/fonts/Zitiming.ttf&#39;);
+    src: url('/fonts/Zitiming.ttf');
 }
 .site-title {
     font-size: 40px !important;
-    font-family: &#39;Zitiming&#39; !important;
+    font-family: 'Zitiming' !important;
 }</code></pre><p>其中字体文件在 <code>themes/next/source/fonts</code> 目录下，里面有个 <code>.gitkeep</code> 的隐藏文件，打开写入你要保留的字体文件，比如我的是就是写入 <code>Zitiming.ttf</code> ，具体字库自己从网上下载即可。</p>
 <h5 id="修改内容区域的宽度"><a href="#修改内容区域的宽度" class="headerlink" title="修改内容区域的宽度"></a>修改内容区域的宽度</h5><p>编辑主题的 <code>source/css/_variables/custom.styl</code> 文件，新增变量：</p>
 <pre><code>// 修改成你期望的宽度
@@ -620,16 +633,16 @@ $content-desktop-large = 900px</code></pre><h5 id="网站标题栏背景颜色">
 </code></pre><h5 id="自定义鼠标样式"><a href="#自定义鼠标样式" class="headerlink" title="自定义鼠标样式"></a>自定义鼠标样式</h5><p>打开 <code>themes/*/source/css/_custom/custom.styl</code> ,在里面写下如下代码：</p>
 <pre><code>// 鼠标样式
   * {
-      cursor: url(&quot;http://om8u46rmb.bkt.clouddn.com/sword2.ico&quot;),auto!important
+      cursor: url("http://om8u46rmb.bkt.clouddn.com/sword2.ico"),auto!important
   }
   :active {
-      cursor: url(&quot;http://om8u46rmb.bkt.clouddn.com/sword1.ico&quot;),auto!important
+      cursor: url("http://om8u46rmb.bkt.clouddn.com/sword1.ico"),auto!important
   }</code></pre><h5 id="文章加密访问"><a href="#文章加密访问" class="headerlink" title="文章加密访问"></a>文章加密访问</h5><p>打开 <code>themes/*/layout/_partials/head.swig</code>文件,在 ``之前插入代码：</p>
 <pre><code>&lt;script&gt;
     (function(){
-        if(&#39;{{ page.password }}&#39;){
-            if (prompt(&#39;请输入密码&#39;) !== &#39;{{ page.password }}&#39;){
-                alert(&#39;密码错误&#39;);
+        if('{{ page.password }}'){
+            if (prompt('请输入密码') !== '{{ page.password }}'){
+                alert('密码错误');
                 history.back();
             }
         }
@@ -642,32 +655,32 @@ password: 123456
 ---</code></pre><h5 id="实现点击出现桃心效果"><a href="#实现点击出现桃心效果" class="headerlink" title="实现点击出现桃心效果"></a>实现点击出现桃心效果</h5><ol>
 <li>在<code>/themes/*/source/js/src</code>下新建文件<code>click.js</code>，接着把以下粘贴到<code>click.js</code>文件中。<br>代码如下：</li>
 </ol>
-<pre><code>!function(e,t,a){function n(){c(&quot;.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}&quot;),o(),r()}function r(){for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)}function o(){var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e){t&amp;&amp;t(),i(e)}}function i(e){var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)}function s(){return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);</code></pre><ol>
+<pre><code>!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e){t&amp;&amp;t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);</code></pre><ol>
 <li>在<code>\themes\*\layout\_layout.swig</code>文件末尾添加：</li>
 </ol>
 <pre><code>&lt;!-- 页面点击小红心 --&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/clicklove.js&quot;&gt;&lt;/script&gt;</code></pre><h5 id="静态资源压缩"><a href="#静态资源压缩" class="headerlink" title="静态资源压缩"></a>静态资源压缩</h5><p>在站点目录下：</p>
+&lt;script type="text/javascript" src="/js/src/clicklove.js"&gt;&lt;/script&gt;</code></pre><h5 id="静态资源压缩"><a href="#静态资源压缩" class="headerlink" title="静态资源压缩"></a>静态资源压缩</h5><p>在站点目录下：</p>
 <pre><code>$ npm install gulp -g</code></pre><p>安装gulp插件：</p>
 <pre><code>npm install gulp-minify-css --save
 npm install gulp-uglify --save
 npm install gulp-htmlmin --save
 npm install gulp-htmlclean --save
 npm install gulp-imagemin --save</code></pre><p>在 <code>Hexo</code> 站点下新建 <code>gulpfile.js</code>文件，文件内容如下：</p>
-<pre><code>var gulp = require(&#39;gulp&#39;);
-var minifycss = require(&#39;gulp-minify-css&#39;);
-var uglify = require(&#39;gulp-uglify&#39;);
-var htmlmin = require(&#39;gulp-htmlmin&#39;);
-var htmlclean = require(&#39;gulp-htmlclean&#39;);
-var imagemin = require(&#39;gulp-imagemin&#39;);
+<pre><code>var gulp = require('gulp');
+var minifycss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
+var htmlmin = require('gulp-htmlmin');
+var htmlclean = require('gulp-htmlclean');
+var imagemin = require('gulp-imagemin');
 // 压缩css文件
-gulp.task(&#39;minify-css&#39;, function() {
-  return gulp.src(&#39;./public/**/*.css&#39;)
+gulp.task('minify-css', function() {
+  return gulp.src('./public/**/*.css')
   .pipe(minifycss())
-  .pipe(gulp.dest(&#39;./public&#39;));
+  .pipe(gulp.dest('./public'));
 });
 // 压缩html文件
-gulp.task(&#39;minify-html&#39;, function() {
-  return gulp.src(&#39;./public/**/*.html&#39;)
+gulp.task('minify-html', function() {
+  return gulp.src('./public/**/*.html')
   .pipe(htmlclean())
   .pipe(htmlmin({
     removeComments: true,
@@ -675,28 +688,28 @@ gulp.task(&#39;minify-html&#39;, function() {
     minifyCSS: true,
     minifyURLs: true,
   }))
-  .pipe(gulp.dest(&#39;./public&#39;))
+  .pipe(gulp.dest('./public'))
 });
 // 压缩js文件
-gulp.task(&#39;minify-js&#39;, function() {
-    return gulp.src([&#39;./public/**/.js&#39;,&#39;!./public/js/**/*min.js&#39;])
+gulp.task('minify-js', function() {
+    return gulp.src(['./public/**/.js','!./public/js/**/*min.js'])
         .pipe(uglify())
-        .pipe(gulp.dest(&#39;./public&#39;));
+        .pipe(gulp.dest('./public'));
 });
 // 压缩 public/demo 目录内图片
-gulp.task(&#39;minify-images&#39;, function() {
-    gulp.src(&#39;./public/demo/**/*.*&#39;)
+gulp.task('minify-images', function() {
+    gulp.src('./public/demo/**/*.*')
         .pipe(imagemin({
            optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
            progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
            interlaced: false, //类型：Boolean 默认：false 隔行扫描gif进行渲染
            multipass: false, //类型：Boolean 默认：false 多次优化svg直到完全优化
         }))
-        .pipe(gulp.dest(&#39;./public/uploads&#39;));
+        .pipe(gulp.dest('./public/uploads'));
 });
 // 默认任务
-gulp.task(&#39;default&#39;, [
-  &#39;minify-html&#39;,&#39;minify-css&#39;,&#39;minify-js&#39;,&#39;minify-images&#39;
+gulp.task('default', [
+  'minify-html','minify-css','minify-js','minify-images'
 ]);</code></pre><p>只需要每次在执行 <code>generate</code> 命令后执行 <code>gulp</code> 就可以实现对静态资源的压缩，压缩完成后执行 <code>deploy</code> 命令同步到服务器：</p>
 <pre><code>hexo g
 gulp
@@ -718,11 +731,11 @@ top: 10
 <p>，插入以下代码即可：</p>
 <pre><code>{% if post.top %}
   <i class="fa fa-thumb-tack"></i>
-  <font color=7D26CD>置顶</font>
+  <font color="7D26CD">置顶</font>
   <span class="post-meta-divider">|</span>
 {% endif %}</code></pre><h5 id="在右上角或者左上角实现fork-me-on-github"><a href="#在右上角或者左上角实现fork-me-on-github" class="headerlink" title="在右上角或者左上角实现fork me on github"></a>在右上角或者左上角实现fork me on github</h5><ol>
-<li>选择样式<a href="https://blog.github.com/2008-12-19-github-ribbons/" target="_blank" rel="noopener">GitHub Ribbons</a>,</li>
-<li>修改图片跳转链接,将<code>[</code>](<a href="https://github.com/you)中的链接换为自己Github链接：" target="_blank" rel="noopener">https://github.com/you)中的链接换为自己Github链接：</a></li>
+<li>选择样式<a href="https://blog.github.com/2008-12-19-github-ribbons/">GitHub Ribbons</a>,</li>
+<li>修改图片跳转链接,将<code>[</code>](<a href="https://github.com/you)中的链接换为自己Github链接：">https://github.com/you)中的链接换为自己Github链接：</a></li>
 <li>打开 <code>themes/next/layout/_layout.swig</code> 文件，把代码复制到``下面。</li>
 </ol>
 <h5 id="主页文章添加边框阴影效果"><a href="#主页文章添加边框阴影效果" class="headerlink" title="主页文章添加边框阴影效果"></a>主页文章添加边框阴影效果</h5><p>打开 <code>themes/*/source/css/_custom/custom.styl</code> ,向里面加代码:</p>
@@ -740,7 +753,7 @@ b2t: true
 # Scroll percent label in b2t button
 scrollpercent: true</code></pre><h5 id="创建分类页"><a href="#创建分类页" class="headerlink" title="创建分类页"></a>创建分类页</h5><p>在终端窗口下，定位到 <code>Hexo</code> 站点目录下，新建：</p>
 <pre><code>$ cd &lt;站点目录&gt;
-$ hexo new page categories</code></pre><h5 id="加入-广告"><a href="#加入-广告" class="headerlink" title="加入 广告"></a>加入 广告</h5><p>主要有两种：<a href="https://ssp.baidu.com/static/register.html" target="_blank" rel="noopener">百度SSP</a>和<a href="https://www.google.com/adsense/start/#/?modal_active=none" target="_blank" rel="noopener">谷歌Adsense</a>。方法类似：</p>
+$ hexo new page categories</code></pre><h5 id="加入-广告"><a href="#加入-广告" class="headerlink" title="加入 广告"></a>加入 广告</h5><p>主要有两种：<a href="https://ssp.baidu.com/static/register.html">百度SSP</a>和<a href="https://www.google.com/adsense/start/#/?modal_active=none">谷歌Adsense</a>。方法类似：</p>
 <ol>
 <li><p>注册，复制广告代码</p>
 </li>
@@ -763,43 +776,43 @@ $ hexo new page categories</code></pre><h5 id="加入-广告"><a href="#加入-�
 <pre><code>npm install --save hexo-helper-live2d</code></pre></li>
 <li><p>复制你喜欢的模型名字：</p>
 <p>Epsilon2.1</p>
-<p><a href="https://huaji8.top/img/live2d/Epsilon2.1.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/Epsilon2.1.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/Epsilon2.1.gif"><img src="https://huaji8.top/img/live2d/Epsilon2.1.gif" alt="img"></a></p>
 <p>Gantzert_Felixander</p>
-<p><a href="https://huaji8.top/img/live2d/Gantzert_Felixander.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/Gantzert_Felixander.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/Gantzert_Felixander.gif"><img src="https://huaji8.top/img/live2d/Gantzert_Felixander.gif" alt="img"></a></p>
 <p>haru</p>
-<p><a href="https://huaji8.top/img/live2d/haru.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/haru.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/haru.gif"><img src="https://huaji8.top/img/live2d/haru.gif" alt="img"></a></p>
 <p>miku</p>
-<p><a href="https://huaji8.top/img/live2d/miku.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/miku.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/miku.gif"><img src="https://huaji8.top/img/live2d/miku.gif" alt="img"></a></p>
 <p>ni-j</p>
-<p><a href="https://huaji8.top/img/live2d/ni-j.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/ni-j.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/ni-j.gif"><img src="https://huaji8.top/img/live2d/ni-j.gif" alt="img"></a></p>
 <p>nico</p>
-<p><a href="https://huaji8.top/img/live2d/nico.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/nico.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/nico.gif"><img src="https://huaji8.top/img/live2d/nico.gif" alt="img"></a></p>
 <p>nietzche</p>
-<p><a href="https://huaji8.top/img/live2d/nietzche.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/nietzche.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/nietzche.gif"><img src="https://huaji8.top/img/live2d/nietzche.gif" alt="img"></a></p>
 <p>nipsilon</p>
-<p><a href="https://huaji8.top/img/live2d/nipsilon.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/nipsilon.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/nipsilon.gif"><img src="https://huaji8.top/img/live2d/nipsilon.gif" alt="img"></a></p>
 <p>nito</p>
-<p><a href="https://huaji8.top/img/live2d/nito.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/nito.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/nito.gif"><img src="https://huaji8.top/img/live2d/nito.gif" alt="img"></a></p>
 <p>shizuku</p>
-<p><a href="https://huaji8.top/img/live2d/shizuku.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/shizuku.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/shizuku.gif"><img src="https://huaji8.top/img/live2d/shizuku.gif" alt="img"></a></p>
 <p>tsumiki</p>
-<p><a href="https://huaji8.top/img/live2d/tsumiki.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/tsumiki.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/tsumiki.gif"><img src="https://huaji8.top/img/live2d/tsumiki.gif" alt="img"></a></p>
 <p>wanko</p>
-<p><a href="https://huaji8.top/img/live2d/wanko.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/wanko.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/wanko.gif"><img src="https://huaji8.top/img/live2d/wanko.gif" alt="img"></a></p>
 <p>z16</p>
-<p><a href="https://huaji8.top/img/live2d/z16.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/z16.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/z16.gif"><img src="https://huaji8.top/img/live2d/z16.gif" alt="img"></a></p>
 <p>hibiki</p>
-<p><a href="https://huaji8.top/img/live2d/hibiki.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/hibiki.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/hibiki.gif"><img src="https://huaji8.top/img/live2d/hibiki.gif" alt="img"></a></p>
 <p>koharu</p>
-<p><a href="https://huaji8.top/img/live2d/koharu.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/koharu.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/koharu.gif"><img src="https://huaji8.top/img/live2d/koharu.gif" alt="img"></a></p>
 <p>haruto</p>
-<p><a href="https://huaji8.top/img/live2d/haruto.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/haruto.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/haruto.gif"><img src="https://huaji8.top/img/live2d/haruto.gif" alt="img"></a></p>
 <p>Unitychan</p>
-<p><a href="https://huaji8.top/img/live2d/Unitychan.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/Unitychan.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/Unitychan.gif"><img src="https://huaji8.top/img/live2d/Unitychan.gif" alt="img"></a></p>
 <p>tororo</p>
-<p><a href="https://huaji8.top/img/live2d/tororo.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/tororo.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/tororo.gif"><img src="https://huaji8.top/img/live2d/tororo.gif" alt="img"></a></p>
 <p>hijiki</p>
-<p><a href="https://huaji8.top/img/live2d/hijiki.gif" target="_blank" rel="noopener"><img src="https://huaji8.top/img/live2d/hijiki.gif" alt="img"></a></p>
+<p><a href="https://huaji8.top/img/live2d/hijiki.gif"><img src="https://huaji8.top/img/live2d/hijiki.gif" alt="img"></a></p>
 </li>
 <li><p>将以下代码添加到主题配置文件<code>_config.yml</code>，修改&lt;你喜欢的模型名字&gt;：</p>
 <pre><code>live2d:  enable: true  scriptFrom: local  pluginRootPath: live2dw/  pluginJsPath: lib/  pluginModelPath: assets/  tagMode: false  log: false  model:    use: live2d-widget-model-&lt;你喜欢的模型名字&gt;  display:    position: right    width: 150    height: 300  mobile:    show: true</code></pre></li>
@@ -830,25 +843,25 @@ $ hexo new page categories</code></pre><h5 id="加入-广告"><a href="#加入-�
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><a href="https://valine.js.org/" target="_blank" rel="noopener">Valine</a></td>
+<td align="left"><a href="https://valine.js.org/">Valine</a></td>
 <td align="left">4</td>
 <td align="left">每天30000条评论，10GB的储存</td>
 <td align="left">作者评论无标识</td>
 </tr>
 <tr>
-<td align="left"><a href="https://livere.com/" target="_blank" rel="noopener">来必力/livere</a></td>
+<td align="left"><a href="https://livere.com/">来必力/livere</a></td>
 <td align="left">4</td>
 <td align="left">多种账号登录</td>
 <td align="left">评论无法导出</td>
 </tr>
 <tr>
-<td align="left"><a href="http://changyan.kuaizhan.com/" target="_blank" rel="noopener">畅言</a></td>
+<td align="left"><a href="http://changyan.kuaizhan.com/">畅言</a></td>
 <td align="left">3</td>
 <td align="left">美观</td>
 <td align="left">必须备案域名</td>
 </tr>
 <tr>
-<td align="left"><a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">gitment</a></td>
+<td align="left"><a href="https://github.com/imsun/gitment">gitment</a></td>
 <td align="left">3</td>
 <td align="left">简洁</td>
 <td align="left">只能登陆github评论</td>
@@ -861,14 +874,14 @@ $ hexo new page categories</code></pre><h5 id="加入-广告"><a href="#加入-�
 </tr>
 </tbody></table>
 <h5 id="Valine"><a href="#Valine" class="headerlink" title="Valine"></a>Valine</h5><p>1.1. 获取APP ID 和 APP Key</p>
-<p>请先登录或注册 <a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>, 进入控制台后点击左下角创建应用，</p>
+<p>请先登录或注册 <a href="https://leancloud.cn/">LeanCloud</a>, 进入控制台后点击左下角创建应用，</p>
 <p>进入刚刚创建的应用，选择左下角的<code>设置</code>&gt;<code>应用Key</code>，然后就能看到你的<code>APP ID</code>和<code>APP Key</code>了。</p>
 <p>1.2. 填写APP ID 和 APP Key到主题配置文件<code>_config.yml</code></p>
 <p>1.3. 运行<code>hexo g&amp;&amp;hexo d</code>推送到博客。</p>
-<h5 id="来必力-livere"><a href="#来必力-livere" class="headerlink" title="来必力/livere"></a>来必力/livere</h5><p>2.1. 登陆 <a href="https://livere.com/" target="_blank" rel="noopener">来必力</a> 获取你的 LiveRe UID。</p>
+<h5 id="来必力-livere"><a href="#来必力-livere" class="headerlink" title="来必力/livere"></a>来必力/livere</h5><p>2.1. 登陆 <a href="https://livere.com/">来必力</a> 获取你的 LiveRe UID。</p>
 <p>2.2. 填写LiveRe UID到主题配置文件<code>_config.yml</code></p>
 <h5 id="畅言"><a href="#畅言" class="headerlink" title="畅言"></a>畅言</h5><p>3.1.获取APP ID 和 APP Key</p>
-<p>请先登录或注册 <a href="http://changyan.kuaizhan.com/" target="_blank" rel="noopener">畅言</a>, 点击“立即免费获取畅言”，</p>
+<p>请先登录或注册 <a href="http://changyan.kuaizhan.com/">畅言</a>, 点击“立即免费获取畅言”，</p>
 <p>新建站点，点击管理，点击评论插件&gt;评论管理，</p>
 <p>点击后台总览，然后就能看到你的<code>APP ID</code>和<code>APP Key</code>了。</p>
 <p>3.2. 填写APP ID 和 APP Key到主题配置文件<code>_config.yml</code></p>
@@ -878,7 +891,7 @@ $ hexo new page categories</code></pre><h5 id="加入-广告"><a href="#加入-�
 <p>npm i –save gitment</p>
 </blockquote>
 <p>4.2. 申请应用</p>
-<p>在<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">New OAuth App</a>为你的博客应用一个密钥:</p>
+<p>在<a href="https://github.com/settings/applications/new">New OAuth App</a>为你的博客应用一个密钥:</p>
 <pre><code>Application name:随便写
 Homepage URL:这个也可以随意写,就写你的博客地址就行
 Application description:描述,也可以随意写
@@ -891,7 +904,7 @@ gitment:
   mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   count: true # Show comments count in post meta area
   lazy: false # Comments lazy loading with a button
-  cleanly: false # Hide &#39;Powered by ...&#39; on footer, and more
+  cleanly: false # Hide 'Powered by ...' on footer, and more
   language: # Force language, or auto switch by theme
   github_user: {you github user id}
   github_repo: 公开的git仓库,评论会作为那个项目的issue
@@ -912,7 +925,7 @@ gitment:
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="noopener">不蒜子</a></td>
+<td align="left"><a href="http://ibruce.info/2015/04/04/busuanzi/">不蒜子</a></td>
 <td align="left">4</td>
 <td align="left">可直接将访问次数显示在您在网页上（也可不显示）</td>
 <td align="left">只计数</td>
@@ -936,13 +949,13 @@ gitment:
 </li>
 <li><p>更改域名</p>
 <pre><code>把原有的：
-&lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
+&lt;script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;
 域名改一下即可：
-&lt;script async src=&quot;．．//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</code></pre></li>
+&lt;script async src="．．//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;</code></pre></li>
 </ol>
 <h5 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h5><ol>
-<li>登录 <a href="http://tongji.baidu.com/" target="_blank" rel="noopener">百度统计</a>，定位到站点的代码获取页面</li>
-<li>复制统计脚本 id，如图：<br>​<a href="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png" target="_blank" rel="noopener"><img src="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png" alt="img"></a></li>
+<li>登录 <a href="http://tongji.baidu.com/">百度统计</a>，定位到站点的代码获取页面</li>
+<li>复制统计脚本 id，如图：<br>​<a href="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png"><img src="http://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png" alt="img"></a></li>
 <li>编辑 主题配置文件<code>themes/*/_config.yml</code>，修改字段 <code>google_analytics</code>，值设置成你的统计脚本 id。</li>
 </ol>
 <h4 id="内容分享服务"><a href="#内容分享服务" class="headerlink" title="内容分享服务"></a>内容分享服务</h4><table>
@@ -955,13 +968,13 @@ gitment:
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><a href="http://share.baidu.com/" target="_blank" rel="noopener">百度分享</a></td>
+<td align="left"><a href="http://share.baidu.com/">百度分享</a></td>
 <td align="left">4</td>
 <td align="left">稳定</td>
 <td align="left">不太美观</td>
 </tr>
 <tr>
-<td align="left"><a href="https://github.com/revir/need-more-share2" target="_blank" rel="noopener">need-more-share2</a></td>
+<td align="left"><a href="https://github.com/revir/need-more-share2">need-more-share2</a></td>
 <td align="left">4</td>
 <td align="left">美观</td>
 <td align="left">更新不及时（比如微信分享API）</td>
@@ -1011,18 +1024,18 @@ baidushare: true</code></pre><h5 id="need-more-share2"><a href="#need-more-share
 <h4 id="YAML-Parsing-Error"><a href="#YAML-Parsing-Error" class="headerlink" title="YAML Parsing Error"></a>YAML Parsing Error</h4><pre><code>JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:      last_updated: Last updated: %s</code></pre><ol>
 <li>参数中包含冒号，请用加引号，如<code>Last updated: %s</code></li>
 </ol>
-<pre><code>JS-YAML: bad indentation of a mapping entry at line 18, column 31:      last_updated：&quot;Last updated: %s&quot;</code></pre><ol>
+<pre><code>JS-YAML: bad indentation of a mapping entry at line 18, column 31:      last_updated："Last updated: %s"</code></pre><ol>
 <li>字段后面的冒号必须为<strong>英文冒号</strong>，如：last_updated:</li>
 <li>字段冒号后面必须跟一个空格，如：last_updated: “Last updated: %s”</li>
 </ol>
 <h4 id="EMFILE-Error"><a href="#EMFILE-Error" class="headerlink" title="EMFILE Error"></a>EMFILE Error</h4><pre><code>Error: EMFILE, too many open files</code></pre><p>生成大量的文件时，可能遇到EMFILE错误。</p>
 <p>可以运行以下命令来增加允许同步I / O操作的数量。</p>
 <pre><code>$ ulimit -n 10000</code></pre><h4 id="Process-Out-of-Memory"><a href="#Process-Out-of-Memory" class="headerlink" title="Process Out of Memory"></a>Process Out of Memory</h4><p>当<code>hexo g</code>时，遇到以下错误：</p>
-<pre><code>FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory</code></pre><p>如下，更改<code>hexo-cli</code>文件的第一行，来增大nodejs堆内存.该bug已在<a href="https://github.com/hexojs/hexo/issues/1735" target="_blank" rel="noopener">新版本</a>修复。</p>
+<pre><code>FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory</code></pre><p>如下，更改<code>hexo-cli</code>文件的第一行，来增大nodejs堆内存.该bug已在<a href="https://github.com/hexojs/hexo/issues/1735">新版本</a>修复。</p>
 <pre><code>#!/usr/bin/env node --max_old_space_size=8192</code></pre><h4 id="Git-Deployment-Problems"><a href="#Git-Deployment-Problems" class="headerlink" title="Git Deployment Problems"></a>Git Deployment Problems</h4><ol>
 <li>RPC failed</li>
 </ol>
-<pre><code>error: RPC failed; result=22, HTTP code = 403fatal: &#39;username.github.io&#39; does not appear to be a git repository</code></pre><p>确保你有你的电脑上设置git正确或尝试使用HTTPS存储库URL。</p>
+<pre><code>error: RPC failed; result=22, HTTP code = 403fatal: 'username.github.io' does not appear to be a git repository</code></pre><p>确保你有你的电脑上设置git正确或尝试使用HTTPS存储库URL。</p>
 <ol>
 <li>Error: ENOENT: no such file or directory</li>
 </ol>
@@ -1040,18 +1053,18 @@ baidushare: true</code></pre><h5 id="need-more-share2"><a href="#need-more-share
 </ol>
 <h4 id="Server-Problems"><a href="#Server-Problems" class="headerlink" title="Server Problems"></a>Server Problems</h4><pre><code>Error: listen EADDRINUSE</code></pre><p>你可能使用相同的端口，同时开启了两个Hexo服务器。如果需要同时开启，可以尝试修改端口设置：</p>
 <pre><code>$ hexo server -p 5000</code></pre><h4 id="Plugin-Installation-Problems"><a href="#Plugin-Installation-Problems" class="headerlink" title="Plugin Installation Problems"></a>Plugin Installation Problems</h4><pre><code>npm ERR! node-waf configure build</code></pre><p>这个错误可能发生在试图安装一个用Cc++或另一个javascript语言编写的插件。确保您已经安装了正确的编译器在您的计算机上。</p>
-<h4 id="Error-with-DTrace-Mac-OS-X"><a href="#Error-with-DTrace-Mac-OS-X" class="headerlink" title="Error with DTrace (Mac OS X)"></a>Error with DTrace (Mac OS X)</h4><pre><code>{ [Error: Cannot find module &#39;./build/Release/DTraceProviderBindings&#39;] code: &#39;MODULE_NOT_FOUND&#39; }{ [Error: Cannot find module &#39;./build/default/DTraceProviderBindings&#39;] code: &#39;MODULE_NOT_FOUND&#39; }{ [Error: Cannot find module &#39;./build/Debug/DTraceProviderBindings&#39;] code: &#39;MODULE_NOT_FOUND&#39; }</code></pre><p>DTrace安装可能有问题，重装:</p>
-<pre><code>$ npm install hexo --no-optional</code></pre><p>详见 <a href="https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796" target="_blank" rel="noopener">#1326</a></p>
+<h4 id="Error-with-DTrace-Mac-OS-X"><a href="#Error-with-DTrace-Mac-OS-X" class="headerlink" title="Error with DTrace (Mac OS X)"></a>Error with DTrace (Mac OS X)</h4><pre><code>{ [Error: Cannot find module './build/Release/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }{ [Error: Cannot find module './build/default/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }{ [Error: Cannot find module './build/Debug/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }</code></pre><p>DTrace安装可能有问题，重装:</p>
+<pre><code>$ npm install hexo --no-optional</code></pre><p>详见 <a href="https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796">#1326</a></p>
 <h4 id="Iterate-Data-Model-on-Jade-or-Swig"><a href="#Iterate-Data-Model-on-Jade-or-Swig" class="headerlink" title="Iterate Data Model on Jade or Swig"></a>Iterate Data Model on Jade or Swig</h4><p>Hexo使用仓库的数据模型。这不是一个数组,所以你可能需要将对象转换为iterable。</p>
 <pre><code>{% for post in site.posts.toArray() %}{% endfor %}</code></pre><h4 id="Data-Not-Updated"><a href="#Data-Not-Updated" class="headerlink" title="Data Not Updated"></a>Data Not Updated</h4><p>一些数据不能更新或新生成的文件的最后一个版本完全相同。清理缓存，再试一次：</p>
 <pre><code>$ hexo clean</code></pre><h4 id="No-command-is-executed"><a href="#No-command-is-executed" class="headerlink" title="No command is executed"></a>No command is executed</h4><p>那个不能使用除<code>help</code>、<code>init</code>和<code>version</code>以外的命令行（即Git Bash）时, 有可能时站点目录下的 <code>package.json</code>文件，缺少<code>hexo</code> ，如下:</p>
-<pre><code>{  &quot;hexo&quot;: {    &quot;version&quot;: &quot;3.2.2&quot;  }}</code></pre><h4 id="Escape-Contents"><a href="#Escape-Contents" class="headerlink" title="Escape Contents"></a>Escape Contents</h4><p>Hexo使用Nunjucks渲染的页面. <code>{ { } }</code>或<code>{ % % }</code>将解析和可能会引起麻烦， 如果要在博文中出现，必须使用三引号：</p>
+<pre><code>{  "hexo": {    "version": "3.2.2"  }}</code></pre><h4 id="Escape-Contents"><a href="#Escape-Contents" class="headerlink" title="Escape Contents"></a>Escape Contents</h4><p>Hexo使用Nunjucks渲染的页面. <code>{ { } }</code>或<code>{ % % }</code>将解析和可能会引起麻烦， 如果要在博文中出现，必须使用三引号：</p>
 <pre><code></code></pre><p>Hello {{ sensitive }}</p>
 <pre><code>​```#### ENOSPC Error (Linux)如果运行命令`$ hexo server` 返回一个错误:</code></pre><p>Error: watch ENOSPC …</p>
 <pre><code>可以通过运行`$ npm dedupe`或者以下命令行（即Git Bash）：</code></pre><p>$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p</p>
 <pre><code>来增加测试时，你可以看见的文件数量。#### EMPERM Error (Windows Subsystem for Linux)如果在Windows Subsystem for Linux，运行命令`$ hexo server` 返回这个错误:</code></pre><p>Error: watch /path/to/hexo/theme/ EMPERM</p>
 <pre><code>因为目前在Windows Subsystem for Linux中，有些内容更改时，还不能实时更新到hexo服务器。所以需要重新编译，再启动服务器：</code></pre><p>$ hexo generate<br>$ hexo server -s</p>
-<pre><code>#### Template render error有时运行命令`$ hexo generate` 返回一个错误:</code></pre><p>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">http://hexo.io/docs/troubleshooting.html</a><br>Template render error: (unknown path)</p>
+<pre><code>#### Template render error有时运行命令`$ hexo generate` 返回一个错误:</code></pre><p>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/docs/troubleshooting.html">http://hexo.io/docs/troubleshooting.html</a><br>Template render error: (unknown path)</p>
 <pre><code>这意味着有些认不出来单词在你的文件，并且很可能在你的新博文,或者配置文件`_config.yml`中，比如缩进错误：错误例子：</code></pre><p>plugins:<br>hexo-generator-feed<br>hexo-generator-sitemap<br>```</p>
 <h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><h4 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h4><p>命令：</p>
 <pre><code>$ hexo new [layout] &lt;title&gt;</code></pre><p>参数说明：</p>
@@ -1175,7 +1188,25 @@ baidushare: true</code></pre><h5 id="need-more-share2"><a href="#need-more-share
 <td align="left"></td>
 </tr>
 </tbody></table>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -1392,28 +1423,6 @@ baidushare: true</code></pre><h5 id="need-more-share2"><a href="#need-more-share
     </div>
 
     
-        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: 'a876eaba418563899f3f',
-        clientSecret: '23bd0886e1cb9fdd5ae7f48f4c4efa6ec46d240c',
-        repo: 'hexotalk',
-        owner: 'heisejianxia',
-        admin: "heisejianxia",
-        id: '2019-10-21T15-37-17',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
-    
 
     
 
@@ -1539,8 +1548,6 @@ baidushare: true</code></pre><h5 id="need-more-share2"><a href="#need-more-share
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
 
 <!-- 代码块折行 -->
 
@@ -1575,7 +1582,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             // headingsOffset: -205,
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h2, h3, h4, h5'
         });
 
         // modify the toc link href to support Chinese.
@@ -1587,7 +1594,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h2, h3, h4, h5').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -1660,7 +1667,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.1k</span>&nbsp;字
+                class="white-color">12k</span>&nbsp;字
             
             
             
@@ -1691,7 +1698,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                     var years = days * 365;
                     var today = new Date();
                     var startYear = "2019";
-                    var startMonth = "6";
+                    var startMonth = "10";
                     var startDate = "28";
                     var startHour = "0";
                     var startMinute = "0";
@@ -1750,6 +1757,16 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
     </div>
 </footer>
+
+<!-- 添加流程图支持 -->
+{% if (theme.mermaid.enable)  %}
+  <script src='https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+{% endif %}
 
 <div class="progress-bar"></div>
 

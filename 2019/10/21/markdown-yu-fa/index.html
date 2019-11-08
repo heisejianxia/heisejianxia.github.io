@@ -242,6 +242,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -381,7 +394,7 @@
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.6k
+                        1.7k
                     </div>
                     
 
@@ -475,22 +488,22 @@
 <hr>
 <hr>
 <h2 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h2><p><strong>语法：</strong></p>
-<pre><code>![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;)
+<pre><code>![图片alt](图片地址 ''图片title'')
 图片alt就是显示在图片下面的文字，相当于对图片内容的解释。
 图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</code></pre><p>示例：</p>
 <pre><code>![blockchain](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/
-u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg &quot;区块链&quot;)</code></pre><p>效果如下：</p>
-<p>![blockchain](<a href="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/" target="_blank" rel="noopener">https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/</a><br>u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg “区块链”)</p>
+u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg "区块链")</code></pre><p>效果如下：</p>
+<p>![blockchain](<a href="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/">https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/</a><br>u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg “区块链”)</p>
 <blockquote>
 <p>上传本地图片直接点击导航栏的图片标志，选择图片即可</p>
 </blockquote>
 <h2 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h2><p><strong>语法：</strong></p>
-<pre><code>[超链接名](超链接地址 &quot;超链接title&quot;)
+<pre><code>[超链接名](超链接地址 "超链接title")
 title可加可不加</code></pre><p><strong>示例：</strong></p>
 <pre><code>[简书](http://jianshu.com)
 [百度](http://baidu.com)</code></pre><p><strong>效果如下：</strong></p>
-<p><a href="http://jianshu.com" target="_blank" rel="noopener">简书</a></p>
-<p><a href="http://baidu.com" target="_blank" rel="noopener">百度</a></p>
+<p><a href="http://jianshu.com">简书</a></p>
+<p><a href="http://baidu.com">百度</a></p>
 <h2 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h2><h3 id="•-无序列表"><a href="#•-无序列表" class="headerlink" title="• 无序列表"></a>• 无序列表</h3><p>语法:<br>无序列表<br>用 - + * 任何一种都可以</p>
 <ul>
 <li>列表内容</li>
@@ -603,7 +616,7 @@ title可加可不加</code></pre><p><strong>示例：</strong></p>
 <pre><code>`create database hero;`</code></pre><p><strong>代码块</strong></p>
 <pre><code>(```)
     function fun(){
-         echo &quot;这是一句非常牛逼的代码&quot;;
+         echo "这是一句非常牛逼的代码";
     }
     fun();
 (```)</code></pre><p><strong>效果如下：</strong></p>
@@ -611,9 +624,12 @@ title可加可不加</code></pre><p><strong>示例：</strong></p>
 <p><code>create database hero;</code></p>
 <p>代码块</p>
 <pre><code>function fun(){
-  echo &quot;这是一句非常牛逼的代码&quot;;
+  echo "这是一句非常牛逼的代码";
 }
-fun();</code></pre><h2 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h2><p>flow</p>
+fun();</code></pre><h2 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h2><blockquote>
+<p><strong>hexo初始时不支持流程图的，需要安装插件才能支持流程图解析</strong></p>
+</blockquote>
+<p>flow</p>
 <pre><code>st=&gt;start: 开始
 op=&gt;operation: My Operation
 cond=&gt;condition: Yes or No?
@@ -636,7 +652,25 @@ isSuccess(yes)-&gt;respondSuccess-&gt;end
 isSuccess(no)-&gt;responseFailure-&gt;end</code></pre><p><strong>效果如下：</strong></p>
 <p>start=&gt;start: 开始<br>loginInfo=&gt;inputoutput: 登录数据<br>verifyLogin=&gt;subroutine: 登录验证<br>isSuccess=&gt;condition: 验证成功？<br>respondSuccess=&gt;operation: 响应成功<br>responseFailure=&gt;operation: 响应失败<br>end=&gt;end: 结束</p>
 <p>start-&gt;loginInfo-&gt;verifyLogin-&gt;isSuccess<br>isSuccess(yes)-&gt;respondSuccess-&gt;end<br>isSuccess(no)-&gt;responseFailure-&gt;end</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -849,28 +883,6 @@ isSuccess(no)-&gt;responseFailure-&gt;end</code></pre><p><strong>效果如下：
     </div>
 
     
-        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: 'a876eaba418563899f3f',
-        clientSecret: '23bd0886e1cb9fdd5ae7f48f4c4efa6ec46d240c',
-        repo: 'hexotalk',
-        owner: 'heisejianxia',
-        admin: "heisejianxia",
-        id: '2019-10-21T16-12-21',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
-    
 
     
 
@@ -902,6 +914,9 @@ isSuccess(no)-&gt;responseFailure-&gt;end</code></pre><p><strong>效果如下：
                     <div class="summary block-with-text">
                         
                             
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
@@ -996,8 +1011,6 @@ Node.js 下载，并安装。详细步骤：https://www.simon96.
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
 
 <!-- 代码块折行 -->
 
@@ -1032,7 +1045,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             // headingsOffset: -205,
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h2, h3, h4, h5'
         });
 
         // modify the toc link href to support Chinese.
@@ -1044,7 +1057,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h2, h3, h4, h5').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -1117,7 +1130,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.1k</span>&nbsp;字
+                class="white-color">12k</span>&nbsp;字
             
             
             
@@ -1148,7 +1161,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                     var years = days * 365;
                     var today = new Date();
                     var startYear = "2019";
-                    var startMonth = "6";
+                    var startMonth = "10";
                     var startDate = "28";
                     var startHour = "0";
                     var startMinute = "0";
@@ -1207,6 +1220,16 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
     </div>
 </footer>
+
+<!-- 添加流程图支持 -->
+{% if (theme.mermaid.enable)  %}
+  <script src='https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+{% endif %}
 
 <div class="progress-bar"></div>
 

@@ -369,7 +369,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.1k</span>&nbsp;字
+                class="white-color">12k</span>&nbsp;字
             
             
             
@@ -400,7 +400,7 @@
                     var years = days * 365;
                     var today = new Date();
                     var startYear = "2019";
-                    var startMonth = "6";
+                    var startMonth = "10";
                     var startDate = "28";
                     var startHour = "0";
                     var startMinute = "0";
@@ -459,6 +459,16 @@
 </div>
     </div>
 </footer>
+
+<!-- 添加流程图支持 -->
+{% if (theme.mermaid.enable)  %}
+  <script src='https://unpkg.com/mermaid@{{ theme.mermaid.version }}/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+{% endif %}
 
 <div class="progress-bar"></div>
 
